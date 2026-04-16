@@ -4,7 +4,7 @@ int insertAtpos(int arr[], int n);
 
 int main() {
 
-    int n;
+    int n; // n is the size of array //
 
     printf("Enter the Size of Array: ");
     scanf("%d", &n);
@@ -26,6 +26,7 @@ int main() {
     return 0;
 }
 
+
 // Insert at certain Point //
 int insertAtpos(int arr[], int n) {
 
@@ -45,4 +46,37 @@ int insertAtpos(int arr[], int n) {
     arr[position - 1] = num;
 
     return n + 1;   // size increases
+}
+
+
+// Insert at any Position just loop //
+/*
+for(int i =n-1; i<=0; i--){
+    arr[i + 1]=arr[i];
+}
+arr[position-1]=num;
+n++;
+*/
+
+
+// Delation Opreation //
+
+int deleteAtpos(int arr[], int n) {
+    int position;
+
+    printf("Enter the Position to delete: ");
+    scanf("%d", &position);
+
+    // Validation
+    if (position <= 0 || position > n) {
+        printf("Invalid Position\n");
+        return n;
+    }
+
+    // Shift left
+    for (int i = position - 1; i < n - 1; i++) {
+        arr[i] = arr[i + 1];
+    }
+
+    return n - 1;
 }
