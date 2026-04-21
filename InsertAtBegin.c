@@ -8,16 +8,19 @@ struct node{
 };
 
 
-void main(){
-struct node *head;
-};
-struct node *head,*newnode;
+int main(){
+struct node *head=NULL,*newnode;
 
-newnode =(struct node*) malloc(sizeof(structnode)); 
+newnode =(struct node*) malloc(sizeof(struct node)); 
 
 printf("Enter the data waht you want to insert at the begining: ");
-scanf("%d",&newnode->node);
+scanf("%d",&newnode->data);
 
 newnode->next=head;
 head=newnode;
+
+printf("Data at head: %d\n", head->data);
+
+return 0;
+
 }
