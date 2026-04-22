@@ -6,6 +6,17 @@ struct node {
     struct node *next;
 };
 
+void length (struct node *head){
+    int count=0;
+    temp=head;
+    
+    while(temp!= Null){
+        count ++;
+        temp=temp->next;
+    }
+    printf("the length of the linked list is : %d",count);
+}
+
 void deleteAtPosition(struct node **head, int pos) {
     struct node *temp = *head;
     struct node *nextnode;
@@ -72,5 +83,6 @@ int main() {
     }
     printf("NULL");
 
+    length(head);
     return 0;
 }
