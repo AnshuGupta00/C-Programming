@@ -23,7 +23,7 @@ void push(){
 }
 void display(){
     int i;
-    for(i=top; i>=0; i--){
+    for(i=top; i>=0; i--){          
         printf(" The element of stack %d \n", stack[i]);
     }
 }
